@@ -30,6 +30,9 @@ resetBtn.addEventListener('click', function(){
     clearInterval(timerId);
     timerDisplay.innerHTML = `00:00:00`;
     msec = secs = mins = 00;
+
+    if(stopBtn.classList != "btn hide") stopBtn.classList.add("hide");
+    if(startBtn.classList == "btn hide") startBtn.classList.remove("hide");
 });
 
 function startTimer(){
